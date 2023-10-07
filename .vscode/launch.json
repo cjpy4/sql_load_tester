@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "sql_load_tester",
+            "cwd": "sql_load_tester",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "sql_load_tester (profile mode)",
+            "cwd": "sql_load_tester",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "sql_load_tester (release mode)",
+            "cwd": "sql_load_tester",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
