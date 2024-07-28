@@ -26,7 +26,7 @@ func connectToDB(usr, pw, addr, dbName string) {
 	// Get a database handle.
 	var err error
 	db, err = sql.Open("mysql", cfg.FormatDSN())
-	// db, err = sql.Open("mysql", "test_user:testpw@tcp(104.155.161.82:3306)/SQL_Mastery")
+	// db, err = sql.Open("mysql", "test_user:password@tcp(104.155.161.82:3306)/SQL_Mastery")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -51,7 +51,7 @@ func runQuery(query string, numRoutines int) {
 
 func main() {
 
-	connectToDB("test_user", "testpw", "104.155.161.82:3306", "SQL_Mastery")
+	connectToDB("test_user", "passwordhere", "104.155.161.82:3306", "SQL_Mastery")
 
 	//res, err := stmt.Exec()
 
@@ -83,7 +83,7 @@ func init() {
 
 // Function to establish a connection to the database
 func (lt *loadTest) connect() {
-	dsn := fmt.Sprintf("test_user:testpw@tcp(104.155.161.82:3306)/SQL_Mastery")
+	dsn := fmt.Sprintf("test_user:password@tcp(104.155.161.82:3306)/SQL_Mastery")
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatalf("Error connecting to database: %v", err)
